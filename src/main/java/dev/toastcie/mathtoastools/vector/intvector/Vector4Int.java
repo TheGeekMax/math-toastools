@@ -40,6 +40,48 @@ public class Vector4Int {
 
     }
 
+    //specials vectors
+
+    public Vector2Int xy() {
+        return new Vector2Int(this.x, this.y);
+    }
+
+    public Vector2Int xz() {
+        return new Vector2Int(this.x, this.z);
+    }
+
+    public Vector2Int xw() {
+        return new Vector2Int(this.x, this.w);
+    }
+
+    public Vector2Int yz() {
+        return new Vector2Int(this.y, this.z);
+    }
+
+    public Vector2Int yw() {
+        return new Vector2Int(this.y, this.w);
+    }
+
+    public Vector2Int zw() {
+        return new Vector2Int(this.z, this.w);
+    }
+
+    public Vector3Int xyz() {
+        return new Vector3Int(this.x, this.y, this.z);
+    }
+
+    public Vector3Int xyw() {
+        return new Vector3Int(this.x, this.y, this.w);
+    }
+
+    public Vector3Int xzw() {
+        return new Vector3Int(this.x, this.z, this.w);
+    }
+
+    public Vector3Int yzw() {
+        return new Vector3Int(this.y, this.z, this.w);
+    }
+
     //calculations methods
 
     public Vector4Int add(Vector4Int other) {

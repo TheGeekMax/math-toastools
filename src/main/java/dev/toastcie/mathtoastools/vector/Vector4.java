@@ -49,6 +49,48 @@ public class Vector4 {
         this.w /= length;
     }
 
+    //specials vectors
+
+    public Vector2 xy() {
+        return new Vector2(this.x, this.y);
+    }
+
+    public Vector2 xz() {
+        return new Vector2(this.x, this.z);
+    }
+
+    public Vector2 xw() {
+        return new Vector2(this.x, this.w);
+    }
+
+    public Vector2 yz() {
+        return new Vector2(this.y, this.z);
+    }
+
+    public Vector2 yw() {
+        return new Vector2(this.y, this.w);
+    }
+
+    public Vector2 zw() {
+        return new Vector2(this.z, this.w);
+    }
+
+    public Vector3 xyz() {
+        return new Vector3(this.x, this.y, this.z);
+    }
+
+    public Vector3 xyw() {
+        return new Vector3(this.x, this.y, this.w);
+    }
+
+    public Vector3 xzw() {
+        return new Vector3(this.x, this.z, this.w);
+    }
+
+    public Vector3 yzw() {
+        return new Vector3(this.y, this.z, this.w);
+    }
+
     //calculations methods
 
     public Vector4 add(Vector4 other) {

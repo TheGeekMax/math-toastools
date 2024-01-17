@@ -1,7 +1,6 @@
 package dev.toastcie.mathtoastools.vector;
 
 public class Vector3 {
-    //TODO auto edit xy yz xz variables when x y or z is edited
     public float x;
     public float y;
     public float z;
@@ -25,6 +24,20 @@ public class Vector3 {
         this.x /= length;
         this.y /= length;
         this.z /= length;
+    }
+
+    //specials vectors
+
+    public Vector2 xy() {
+        return new Vector2(this.x, this.y);
+    }
+
+    public Vector2 yz() {
+        return new Vector2(this.y, this.z);
+    }
+
+    public Vector2 xz() {
+        return new Vector2(this.x, this.z);
     }
 
     //calculations methods

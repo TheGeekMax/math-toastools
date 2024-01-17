@@ -21,6 +21,20 @@ public class Vector3Int {
 
     }
 
+    //specials vectors
+
+    public Vector2Int xy() {
+        return new Vector2Int(this.x, this.y);
+    }
+
+    public Vector2Int xz() {
+        return new Vector2Int(this.x, this.z);
+    }
+
+    public Vector2Int yz() {
+        return new Vector2Int(this.y, this.z);
+    }
+
     //calculations methods
 
     public Vector3Int add(Vector3Int other) {
