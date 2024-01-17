@@ -6,13 +6,43 @@
 
     <groupId>dev.toastcie.mathtoastools</groupId>
     <artifactId>math-toastools</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
+
+    <licenses>
+        <license>
+            <name>GNU General Public License v3.0</name>
+            <url>https://opensource.org/licenses/GPL-3.0</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>TheGeekMax</id>
+            <name>Maxime Sanciaume</name>
+            <email>maximesanciaume@gmail.com</email>
+            <url>https://toastcie.dev</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/TheGeekMax/math-toastools.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/TheGeekMax/math-toastools.git</developerConnection>
+        <url>https://github.com/TheGeekMax/math-toastools.git</url>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.version>1.9.22</kotlin.version>
+        <dokka.version>1.9.10</dokka.version>
     </properties>
 
     <dependencies>
@@ -31,6 +61,58 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>${dokka.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>javadocJar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.13</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
