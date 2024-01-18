@@ -2,7 +2,7 @@ package dev.toastcie.mathtoastools.vector.intvector
 
 import kotlin.math.sqrt
 
-data class Vector2Int(val x: Int, val y: Int) {
+data class Vector2Int(var x: Int, var y: Int) {
 
     //calculations methods
     operator fun plus(other: Vector2Int): Vector2Int = Vector2Int(x + other.x, y + other.y)

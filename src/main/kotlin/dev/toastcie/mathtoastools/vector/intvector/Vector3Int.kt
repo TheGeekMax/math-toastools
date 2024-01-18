@@ -2,7 +2,7 @@ package dev.toastcie.mathtoastools.vector.intvector
 
 import kotlin.math.sqrt
 
-data class Vector3Int(val x: Int, val y: Int, val z: Int) {
+data class Vector3Int(var x: Int, var y: Int, var z: Int) {
     constructor(xy: Vector2Int, z: Int) : this(xy.x,xy.y,z)
 
     //editing methods
