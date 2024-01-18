@@ -2,7 +2,7 @@ package dev.toastcie.mathtoastools.vector
 
 import kotlin.math.sqrt
 
-data class Vector2(val x: Float, val y: Float) {
+data class Vector2(var x: Float, var y: Float) {
     //editing methods
     val normalized: Vector2
         get(){
