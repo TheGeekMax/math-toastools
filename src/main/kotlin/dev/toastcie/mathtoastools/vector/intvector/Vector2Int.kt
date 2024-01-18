@@ -7,6 +7,7 @@ import kotlin.math.sqrt
  *
  * @property x the x value of the vector
  * @property y the y value of the vector
+ * @constructor creates a vector with the given values
  */
 data class Vector2Int(var x: Int, var y: Int) {
 
@@ -57,10 +58,10 @@ data class Vector2Int(var x: Int, var y: Int) {
     operator fun times(other: Int): Vector2Int = Vector2Int(x * other, y * other)
 
     /**
-     * Divides two vectors
+     * dot product of two vectors
      *
-     * @param other the vector to divide
-     * @return the quotient of the two vectors
+     * @param other the vector to dot
+     * @return the dot product of the two vectors
      */
     infix fun dot(other: Vector2Int): Int = x * other.x + y * other.y
 
