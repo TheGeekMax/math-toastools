@@ -6,7 +6,7 @@
 
     <groupId>dev.toastcie.mathtoastools</groupId>
     <artifactId>math-toastools</artifactId>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
 
     <name>Math Toastools</name>
     <description>a java library for doing math. can be usefull for making 3d (or 4d) Rasterizer or Raymarching engine</description>
@@ -68,6 +68,7 @@
     </dependencies>
 
     <build>
+        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -132,12 +133,6 @@
                         <goals>
                             <goal>compile</goal>
                         </goals>
-                        <configuration>
-                            <sourceDirs>
-                                <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
-                                <sourceDir>${project.basedir}/src/main/java</sourceDir>
-                            </sourceDirs>
-                        </configuration>
                     </execution>
                     <execution>
                         <id>test-compile</id>
