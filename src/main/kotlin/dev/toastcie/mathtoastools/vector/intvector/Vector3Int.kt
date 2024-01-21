@@ -20,20 +20,32 @@ data class Vector3Int(var x: Int, var y: Int, var z: Int) {
     /**
      * The x and y values of the vector
      */
-    val xy: Vector2Int
+    var xy: Vector2Int
         get() = Vector2Int(x, y)
+        set(value) {
+            x = value.x
+            y = value.y
+        }
 
     /**
      * The x and z values of the vector
      */
-    val xz: Vector2Int
+    var xz: Vector2Int
         get() = Vector2Int(x, z)
+        set(value) {
+            x = value.x
+            z = value.y
+        }
 
     /**
      * The y and z values of the vector
      */
-    val yz: Vector2Int
+    var yz: Vector2Int
         get() = Vector2Int(y, z)
+        set(value) {
+            y = value.x
+            z = value.y
+        }
 
     //calculations methods
     /**

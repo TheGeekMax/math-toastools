@@ -37,62 +37,106 @@ data class Vector4(var x:Float, var y:Float, var z:Float, var w:Float) {
     /**
      * the x and y values of the vector
      */
-    val xy: Vector2
+    var xy: Vector2
         get() = Vector2(x, y)
+        set(value) {
+            x = value.x
+            y = value.y
+        }
 
     /**
      * the x and z values of the vector
      */
-    val xz: Vector2
+    var xz: Vector2
         get() = Vector2(x, z)
+        set(value) {
+            x = value.x
+            z = value.y
+        }
 
     /**
      * the x and w values of the vector
      */
-    val xw: Vector2
+    var xw: Vector2
         get() = Vector2(x, w)
+        set(value) {
+            x = value.x
+            w = value.y
+        }
 
     /**
      * the y and z values of the vector
      */
-    val yz: Vector2
+    var yz: Vector2
         get() = Vector2(y, z)
+        set(value) {
+            y = value.x
+            z = value.y
+        }
 
     /**
      * the y and w values of the vector
      */
-    val yw: Vector2
+    var yw: Vector2
         get() = Vector2(y, w)
+        set(value) {
+            y = value.x
+            w = value.y
+        }
 
     /**
      * the z and w values of the vector
      */
-    val zw: Vector2
+    var zw: Vector2
         get() = Vector2(z, w)
+        set(value) {
+            z = value.x
+            w = value.y
+        }
 
     /**
      * the x, y and z values of the vector
      */
-    val xyz: Vector3
+    var xyz: Vector3
         get() = Vector3(x, y, z)
+        set(value) {
+            x = value.x
+            y = value.y
+            z = value.z
+        }
 
     /**
      * the x, y and w values of the vector
      */
-    val xyw: Vector3
+    var xyw: Vector3
         get() = Vector3(x, y, w)
+        set(value) {
+            x = value.x
+            y = value.y
+            w = value.z
+        }
 
     /**
      * the x, z and w values of the vector
      */
-    val xzw: Vector3
+    var xzw: Vector3
         get() = Vector3(x, z, w)
+        set(value) {
+            x = value.x
+            z = value.y
+            w = value.z
+        }
 
     /**
      * the y, z and w values of the vector
      */
-    val yzw: Vector3
+    var yzw: Vector3
         get() = Vector3(y, z, w)
+        set(value) {
+            y = value.x
+            z = value.y
+            w = value.z
+        }
 
     //calculations methods
     /**

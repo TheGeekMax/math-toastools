@@ -27,20 +27,32 @@ data class Vector3(var x: Float, var y: Float, var z: Float) {
     /**
      * the x and y values of the vector
      */
-    val xy: Vector2
+    var xy: Vector2
         get() = Vector2(x, y)
+        set(value) {
+            x = value.x
+            y = value.y
+        }
 
     /**
      * the x and z values of the vector
      */
-    val xz: Vector2
+    var xz: Vector2
         get() = Vector2(x, z)
+        set(value) {
+            x = value.x
+            z = value.y
+        }
 
     /**
      * the y and z values of the vector
      */
-    val yz: Vector2
+    var yz: Vector2
         get() = Vector2(y, z)
+        set(value) {
+            y = value.x
+            z = value.y
+        }
 
     //calculations methods
     /**
