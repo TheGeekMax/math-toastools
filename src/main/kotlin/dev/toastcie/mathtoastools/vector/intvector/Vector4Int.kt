@@ -24,62 +24,106 @@ data class Vector4Int(var x:Int, var y:Int, var z:Int, var w:Int) {
     /**
      * The x and y values of the vector
      */
-    val xy: Vector2Int
+    var xy: Vector2Int
         get() = Vector2Int(x, y)
+        set(value) {
+            x = value.x
+            y = value.y
+        }
 
     /**
      * The x and z values of the vector
      */
-    val xz: Vector2Int
+    var xz: Vector2Int
         get() = Vector2Int(x, z)
+        set(value) {
+            x = value.x
+            z = value.y
+        }
 
     /**
      * The x and w values of the vector
      */
-    val xw: Vector2Int
+    var xw: Vector2Int
         get() = Vector2Int(x, w)
+        set(value) {
+            x = value.x
+            w = value.y
+        }
 
     /**
      * The y and z values of the vector
      */
-    val yz: Vector2Int
+    var yz: Vector2Int
         get() = Vector2Int(y, z)
+        set(value) {
+            y = value.x
+            z = value.y
+        }
 
     /**
      * The y and w values of the vector
      */
-    val yw: Vector2Int
+    var yw: Vector2Int
         get() = Vector2Int(y, w)
+        set(value) {
+            y = value.x
+            w = value.y
+        }
 
     /**
      * The z and w values of the vector
      */
-    val zw: Vector2Int
+    var zw: Vector2Int
         get() = Vector2Int(z, w)
+        set(value) {
+            z = value.x
+            w = value.y
+        }
 
     /**
      * The x, y and z values of the vector
      */
-    val xyz: Vector3Int
+    var xyz: Vector3Int
         get() = Vector3Int(x, y, z)
+        set(value) {
+            x = value.x
+            y = value.y
+            z = value.z
+        }
 
     /**
      * The x, y and w values of the vector
      */
-    val xyw: Vector3Int
+    var xyw: Vector3Int
         get() = Vector3Int(x, y, w)
+        set(value) {
+            x = value.x
+            y = value.y
+            w = value.z
+        }
 
     /**
      * The x, z and w values of the vector
      */
-    val xzw: Vector3Int
+    var xzw: Vector3Int
         get() = Vector3Int(x, z, w)
+        set(value) {
+            x = value.x
+            z = value.y
+            w = value.z
+        }
 
     /**
      * The y, z and w values of the vector
      */
-    val yzw: Vector3Int
+    var yzw: Vector3Int
         get() = Vector3Int(y, z, w)
+        set(value) {
+            y = value.x
+            z = value.y
+            w = value.z
+        }
 
     //calculations methods
     /**
